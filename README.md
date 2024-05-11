@@ -6,13 +6,16 @@ Installation:
 
 –CUDA and cudNN for NVIDIA GPU support.
 
-–Dlib library for CNN based face detection.
+–Dlib library for CNN-based face detection.
+
 –mmod_human_face_detector.dat for face parameterization.
 
 ## Key Features
-It detects faces in each frame of the video. For each face detected, it assign 128 face-parametes and makes a pickle file. 
+It detects faces in each frame of the video. For each face detected, it assigns 128 face parameters and makes a pickle file.
+
 Then, it groups similar faces into clusters based on the closeness of the Euclidean distance of the face parameters. It uses the DBScan face clustering technique to do the same. It makes another pickle file with the clustered faces.
-It detects faces in an unknown video and matches those faces with the clustered faces pickle file and displays the text "SAME FACE" for known faces.
+
+It detects faces in an unknown video, matches those faces with the clustered faces pickle file, and displays the text "SAME FACE" for known faces.
 
 ## Advanced Functionalities
 This does not require supervised training for known faces. Therefore, a huge dataset with multiple images of the same person is not required to be created manually. It uses clustering to identify unique faces in unseen videos. These unique faces are then detectable in other unseen videos. 
@@ -21,22 +24,34 @@ This does not require supervised training for known faces. Therefore, a huge dat
 Programming Language: Python
 
 Libraries used:
+
 1.sklearn (scikit learn)
+
 2.imutils
+
 3.numpy
+
 4.argparse
+
 5.pickle
+
 6.OpenCV (cv2)
+
 7.sys 
+
 8.dlib
+
 9.time
+
 10.face_recognition
 
 ## How To Run
 There are 3 main codes. 
 –The cnn_face_encoder.py file is used to detect faces in each frame of the video and make a pickle file out of it. 
+
 –The clusterFaces.py file is used to group similar faces into classes and make another pickle file of clustered faces. 
-–The comperator_actual.py file is used to compare the faces in the new video with the faces the machine was trained with (detection). The pickle files and mmod_human_face_detector.dat must be linked at necesary places.
+
+–The comperator_actual.py file is used to compare the faces in the new video with the faces the machine was trained with (detection). The pickle files and mmod_human_face_detector.dat must be linked at the necessary places.
 
 Terminal commands are as follows:
 
@@ -48,7 +63,9 @@ Detecting (testing): python comperator_actual.py -i vdos/test.mp4 -m mmod_human_
 
 ## Applications
 –It can be used for proxy detection in educational institutions and workplaces as face detection for marking attendance would be a strict system.
+
 –It can used to detect missing children from CCTV camera footage of different streets which they might be suspected to have taken.
+
 –It can be used for detecting hostages from the videos released by kidnappers which will help the police in tracking them down.
 
 ## Further Improvements
