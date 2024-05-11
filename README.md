@@ -4,11 +4,11 @@ It does face recognition and parameterization to recognize all faces in videos. 
 ## Getting Started
 Installation: 
 
-–CUDA and cudNN for NVIDIA GPU support.
+– CUDA and cudNN for NVIDIA GPU support.
 
-–Dlib library for CNN-based face detection.
+– Dlib library for CNN-based face detection.
 
-–mmod_human_face_detector.dat for face parameterization.
+– mmod_human_face_detector.dat for face parameterization.
 
 ## Key Features
 It detects faces in each frame of the video. For each face detected, it assigns 128 face parameters and makes a pickle file.
@@ -47,11 +47,11 @@ Libraries used:
 
 ## How To Run
 There are 3 main codes. 
-–The cnn_face_encoder.py file is used to detect faces in each frame of the video and make a pickle file out of it. 
+– The cnn_face_encoder.py file is used to detect faces in each frame of the video and make a pickle file out of it. 
 
-–The clusterFaces.py file is used to group similar faces into classes and make another pickle file of clustered faces. 
+– The clusterFaces.py file is used to group similar faces into classes and make another pickle file of clustered faces. 
 
-–The comperator_actual.py file is used to compare the faces in the new video with the faces the machine was trained with (detection). The pickle files and mmod_human_face_detector.dat must be linked at the necessary places.
+– The comperator_actual.py file is used to compare the faces in the new video with the faces the machine was trained with (detection). The pickle files and mmod_human_face_detector.dat must be linked at the necessary places.
 
 Terminal commands are as follows:
 
@@ -62,11 +62,11 @@ Clustering: python clusterFaces.py -e encodings/aachar.pickle -d 1 -o encodings/
 Detecting (testing): python comperator_actual.py -i vdos/test.mp4 -m mmod_human_face_detector.dat -e encodings/aachar-clustered.pickle
 
 ## Applications
-–It can be used for proxy detection in educational institutions and workplaces as face detection for marking attendance would be a strict system.
+– It can be used for proxy detection in educational institutions and workplaces as face detection for marking attendance would be a strict system.
 
-–It can used to detect missing children from CCTV camera footage of different streets which they might be suspected to have taken.
+– It can used to detect missing children from CCTV camera footage of different streets which they might be suspected to have taken.
 
-–It can be used for detecting hostages from the videos released by kidnappers which will help the police in tracking them down.
+– It can be used for detecting hostages from the videos released by kidnappers which will help the police in tracking them down.
 
 ## Further Improvements
 The face clustering code groups faces into different classes. There can be cases where the side profile and the front profile of the same person is put into different classes and we manually have to group them as the same person. I would like to improve on this so that the machine itself can group the front and side profiles of a person and put them into a single class.
@@ -75,4 +75,4 @@ The face clustering code groups faces into different classes. There can be cases
 Inspiration was taken from the blog on face detection by pyimagesearch. An example code from dlib library was enhanced for this project.
 
 ## Demo Video
-https://www.youtube.com/watch?v=e6uIOivYKd4
+
