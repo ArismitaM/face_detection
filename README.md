@@ -5,6 +5,7 @@ It does face recognition and parameterization to recognize all faces in videos. 
 Installation: 
 
 –CUDA and cudNN for NVIDIA GPU support.
+
 –Dlib library for CNN based face detection.
 –mmod_human_face_detector.dat for face parameterization.
 
