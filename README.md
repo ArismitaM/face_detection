@@ -47,6 +47,7 @@ Libraries used:
 
 ## How To Run
 There are 3 main codes. 
+
 – The cnn_face_encoder.py file is used to detect faces in each frame of the video and make a pickle file out of it. 
 
 – The clusterFaces.py file is used to group similar faces into classes and make another pickle file of clustered faces. 
