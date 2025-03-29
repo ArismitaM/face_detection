@@ -76,7 +76,7 @@ The face clustering code groups faces into different classes. There can be cases
 Inspiration was taken from the blog on face detection by pyimagesearch. An example code from dlib library was enhanced for this project.
 
 ## Demo Video
-## Demo Video  
+
 [![Watch the video](https://img.youtube.com/vi/e6uIOivYKd4/0.jpg)](https://www.youtube.com/watch?v=e6uIOivYKd4&ab_channel=GautamKappagal)  
 
 🔹 **Timestamp:** [6:30 - 9:30](https://www.youtube.com/watch?v=e6uIOivYKd4&t=390s)  
